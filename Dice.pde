@@ -1,4 +1,4 @@
-int totalSum = 0; 
+int totalSum = 0;
 
 void setup() {
   size(1000, 1000);
@@ -7,18 +7,18 @@ void setup() {
 
 void draw() {
   background(255, random(100,255), 255);
-  totalSum = 0; 
+  totalSum = 0;
   for (int y = 50; y < 900; y = y + 60) {
     for (int x = 50; x < 900; x = x + 60) {
       Die bob = new Die(x, y);
       bob.show();
-      totalSum += bob.rolled; 
+      totalSum += bob.rolled;
     }
   }
 
   fill(0);
   textSize(20);
-  text("Total Sum: " + totalSum, 50, 970); 
+  text("Total Sum: " + totalSum, 50, 970);
 }
 
 void mousePressed() {
@@ -39,12 +39,13 @@ class Die {
   }
 
   void show() {
-    noStroke();
+    stroke(255);
+    strokeWeight(5);
     fill(random(100, 255), random(100, 255), 255);
-    rect(myX, myY, 50, 50);
+    rect(myX, myY, 50, 50,7);
     fill(0);
     textSize(30);
-
+    noStroke();
     if (rolled == 1) {
       ellipse(myX + 25, myY + 25, 10, 10);
     } else if (rolled == 2) {
