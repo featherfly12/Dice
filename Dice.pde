@@ -6,7 +6,7 @@ void setup() {
 }
 
 void draw() {
-  background(255, random(100,255), 255);
+  background(255, 255, 255);
   totalSum = 0;
   for (int y = 50; y < 900; y = y + 60) {
     for (int x = 50; x < 900; x = x + 60) {
